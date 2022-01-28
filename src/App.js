@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-
+import Navbar from './component/Navbar'
+import News from './component/News.jsx';
 export default class App extends Component {
   render() {
-    return (
-      <input type="submit" value="Submit" className='btn btn-success'/>
+    return (<>
+      <Navbar/>
+      <News pageSize="9"/>
+    </>
     )
   }
 }
