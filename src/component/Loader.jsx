@@ -1,42 +1,11 @@
-import React from 'react';
-import '../loader.css';
-
-export default function Loader() {
-    window.onload = () => {
-        var span = document.querySelectorAll("span");
-
-        for (var i = 0; i < span.length; i++) {
-          var deg = (i * 360) / 20;
-          span[i].style.transform = "rotate(" + deg + "deg)";
-        }
-        for ( i = 0; i < span.length; i++) {
-          var color = (i * 360) / 20;
-          span[i].style.color = "hsl(" + color + ", 50%, 50%)";
-        }
-      };
-  return (
-    <div className="loader">
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <span className="span"></span>
-      <div className="loading">Loading...</div>
-    </div>
-  )
+import React, { Component } from 'react'
+import loading from '../loading.gif'
+export default class Loader extends Component {
+  render() {
+    return (
+      <div className='text-center'>
+        <img src={loading} className='mx-3' alt="" style={{height:'50px',width:'50px'}}/>
+      </div>
+    )
+  }
 }
